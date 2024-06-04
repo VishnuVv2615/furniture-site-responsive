@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+
+:root {
+    --primary-color-1: #3b5d50;
+    --primary-color-2: #355348;
+    --primary-color-3: #2f4a40;
+    --primary-color-4: #294138;
+    --primary-color-5: #233730;
+    --primary-color-6: #1d2e28;
+    --primary-color-7: #172520;
+    --primary-color-8: #111b18;
+    --primary-color-9: #0b1210;
+    --primary-color-10: #050908;
+    --primary-color-11: #000000;
+  }
+  :root {
+    --secondary-color-1: #3b5d50;
+    --secondary-color-2: #4e6d61;
+    --secondary-color-3: #627d72;
+    --secondary-color-4: #758d84;
+    --secondary-color-5: #899d96;
+    --secondary-color-6: #9daea7;
+    --secondary-color-7: #b0beb9;
+    --secondary-color-8: #c4ceca;
+    --secondary-color-9: #d7dedc;
+    --secondary-color-10: #ebeeed;
+    --secondary-color-11: #ffffff; 
+  }
+  :root{
+    --background-color-1:#6a6a6a;
+    --background-color-2:#5f5f5f;
+    --background-color-3: #f0f0f0;
+    --background-color-4: #e1e1e1;
+    --background-color-5:#d2d2d2;
+    --background-color-6: #353535;
+    --background-color-7:#2a2a2a;
+    --background-color-8:#1f1f1f;
+    --background-color-9:#151515;
+    --background-color-10:#0a0a0a;
+    --background-color-11:#000000;    
+  }
+ 
+
+
+

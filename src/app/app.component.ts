@@ -1,10 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './Header/navbar/navbar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ShopComponent } from './pages/shop/shop.component';
+import { AboutComponent } from './pages/about/about.component';
+import { SevicesComponent } from './pages/services/sevices.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,NavbarComponent,HomeComponent,
+    ShopComponent,
+    AboutComponent,
+    SevicesComponent,
+    BlogComponent,
+    ContactComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

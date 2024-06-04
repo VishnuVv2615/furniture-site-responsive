@@ -1,0 +1,109 @@
+.header {
+    background-color: var(--primary-color-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo, h2 {
+    padding-left: 20px;
+    font-size: xx-large;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--secondary-color-11);
+}
+
+.logo span {
+    color: var(--secondary-color-3);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    padding-right: 10px;
+    color: var(--secondary-color-4);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color-11);
+    cursor: pointer;
+}
+
+.login-cart {
+    padding-right: 20px;
+}
+.login,.cart{
+    color: var(--secondary-color-3);
+}
+.login:hover, .cart:hover {
+    color: var(--secondary-color-11);
+    cursor: pointer;
+}
+
+.nav-link.active {
+    position: relative;
+    color: var(--secondary-color-11);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .nav-links {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 200px;
+        background-color: var(--primary-color-1);
+        padding: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        display: block;
+        width: 0;
+    }
+
+    .login-cart {
+        padding-left: 0%;
+        display: flex;
+        gap: 20px;
+    }
+
+    .menu {
+        display: flex; /* Show the menu icon */
+        align-items: center;
+        margin-right: 10px;
+        color: var(--secondary-color-4);
+        font-size: 24px; /* Adjust size as needed */
+        cursor: pointer;
+    }
+
+    .menu:hover {
+        color: var(--secondary-color-11);
+    }
+}
