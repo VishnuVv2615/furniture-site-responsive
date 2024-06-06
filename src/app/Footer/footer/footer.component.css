@@ -1,0 +1,127 @@
+.footer-section{
+    background-color: var(--secondary-color-11);
+    z-index: 2;
+}
+.container{
+    padding: 10px;
+    gap: 50px;
+}
+.chair-image{
+    position: absolute;
+    top: -30%;
+    right: 0%;
+    width: 400px;
+    height: auto;
+    z-index: 1;
+}
+
+.subscription{
+    gap: 2px;
+}
+.subscription p{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+}
+.fa-solid ,.fa-square-envelope{
+font-size: 30px;
+color: var(--primary-color-1);
+}
+
+.input-field{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+}
+.send-icon{
+    background-color: var(--primary-color-1);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.send-icon:hover{
+    background-color: var(--primary-color-4);
+}
+ .fa-paper-plane{
+    color: var(--secondary-color-11);
+    font-size: larger;
+}
+
+.logo, h2 {
+    font-size: xx-large;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-color-1);
+}
+
+.logo span {
+    color: var(--secondary-color-3);
+}
+.detail{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+li{
+    list-style-type: none;
+}
+li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 75ms ease;
+}
+
+.icon-social{
+    background-color: var(--secondary-color-6);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color-1);
+    border-radius: 10px;
+}
+.icon-social:hover{
+    background-color: var(--secondary-color-4);
+    cursor: pointer;
+}
+.cpy-right{
+    font-size: 12px;
+    font-weight: 500;
+}
+.social-links{
+    justify-content: center;
+    align-items: center;
+}
+
+/* mobile view */
+@media (max-width:767px){
+    .input-field{
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    .chair-image{
+        position: absolute;
+        top: -10%;
+        right: 0%;
+        width: 150px;
+        height: auto;
+        z-index: 1;
+    }
+}
+
+@media (min-width:767px) and (max-width:984px){
+    .chair-image{
+        position: absolute;
+        top: -15%;
+        right: 0%;
+        width: 200px;
+        height: auto;
+        z-index: 1;
+    }
+}

@@ -13,12 +13,12 @@ export class NavbarComponent implements OnInit {
   isMenuOpen:boolean=false;
 
   navLinks=[
-    {label:'Home',active:false,route:'/'},
-    {label:'Shop',active:false,route:'/shop'},
-    {label:'About Us',active:false,route:'/about'},
-    {label:'Services',active:false,route:'/services'},
-    {label:'Blog',active:false,route:'/blog'},
-    {label:'Contact',active:false,route:'/contact'},
+    {label:'Home',active:false,route:'/',id:'/'},
+    {label:'Shop',active:false,route:'/shop',id:'shop'},
+    {label:'About Us',active:false,route:'/about',id:'about'},
+    {label:'Services',active:false,route:'/services',id:'services'},
+    {label:'Blog',active:false,route:'/blog',id:'blog'},
+    {label:'Contact',active:false,route:'/contact',id:'contact'},
   ]
 
   constructor( private router:Router){}
@@ -43,5 +43,15 @@ ngOnInit(): void {
   }
   closeMenu(): void {
     this.isMenuOpen = false;
+  }
+
+  scrollToSection(route:string):void{
+ const link=this.navLinks.find(item=> item.route===route);
+ if(link){
+  const element=document.getElementById(link.id);
+  if(element){
+    element.scrollIntoView({behavior:'smooth'});
+  }
+ }
   }
 }
