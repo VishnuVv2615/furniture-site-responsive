@@ -2,71 +2,18 @@
     <div class="container">
         <h2>Our Services</h2>
         <div class="services row">
-            <div class="ser-details col-6 col-md-3">
-                <div class="fast-ship">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <h4>Fast & Free Shipping</h4>
-                    <p>Free shipping is an increasingly-popular option for online shopping, where customers do
-                        not have to pay an additional shipping charge</p>
+            <div class="ser-details col-6 col-md-3" *ngFor="let service of services">
+                <div class="service-item">
+                    <i [class]="service.icon"></i>
+                    <h4>{{ service.title }}</h4>
+                    <p>{{ service.description }}</p>
+                </div>
+                <div class="service-item">
+                    <i [class]="service.icon"></i>
+                    <h4>{{ service.title }}</h4>
+                    <p>{{ service.description }}</p>
                 </div>
             </div>
-            <div class="ser-details col-md-3">
-                <div class="easy-shop">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <h4>Easy to Shop</h4>
-                    <p>Free shipping is an increasingly-popular option for online shopping, where customers do
-                        not have to pay an additional shipping charge</p>
-                </div>
-            </div>
-            <div class="ser-details col-md-3">
-                <div class="support">
-                    <i class="fa-solid fa-headset"></i>
-                    <h4>24/7 Support</h4>
-                    <p>Free shipping is an increasingly-popular option for online shopping, where customers do
-                        not have to pay an additional shipping charge</p>
-                </div>
-            </div>
-            <div class="ser-details col-md-3">
-                <div class="easy-return">
-                    <i class="fa-solid fa-arrow-rotate-left"></i>
-                    <h4>Free Returns</h4>
-                    <p>Free shipping is an increasingly-popular option for online shopping, where customers do
-                        not have to pay an additional shipping charge</p>
-                </div>
-            </div>
-            <div class="ser-details col-6 col-md-3">
-                <div class="fast-ship">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <h4>Fast & Free Shipping</h4>
-                    <p>Free shipping is an increasingly-popular option for online shopping, where customers do
-                        not have to pay an additional shipping charge</p>
-                </div>
-            </div>
-            <div class="ser-details col-md-3">
-                <div class="easy-shop">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <h4>Easy to Shop</h4>
-                    <p>Free shipping is an increasingly-popular option for online shopping, where customers do
-                        not have to pay an additional shipping charge</p>
-                </div>
-            </div>
-            <div class="ser-details col-md-3">
-                <div class="support">
-                    <i class="fa-solid fa-headset"></i>
-                    <h4>24/7 Support</h4>
-                    <p>Free shipping is an increasingly-popular option for online shopping, where customers do
-                        not have to pay an additional shipping charge</p>
-                </div>
-            </div>
-            <div class="ser-details col-md-3">
-                <div class="easy-return">
-                    <i class="fa-solid fa-arrow-rotate-left"></i>
-                    <h4>Free Returns</h4>
-                    <p>Free shipping is an increasingly-popular option for online shopping, where customers do
-                        not have to pay an additional shipping charge</p>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
@@ -76,31 +23,16 @@
     <div class="container row">
         <div class="details col-6 col-md-3">
             <div class="heading-section">
-                <h2>Crafted with Exellent matrial</h2>
-                <p>furniture, household equipment, usually made of wood, metal, plastics, marble, glass, fabrics, or related
-                    materials and having a variety of different purposes</p>
+               <h2>{{material.heading}}</h2>
+               <p>{{material.description}}</p>
                     <button class="btn" (click)="scrollToTop($event)">Explore</button>
             </div>
         </div>
-        <div class="details col-md-3">
-            <div class="image-section d-flex flex-column justify-content-lg-center align-items-lg-center">
-                <img src="assets\images\chair2.png" alt="chair image" class="image-ch">
-                        <p>Magna Single Seater Recliner Sofa</p>
-                        <p>$19,999</p>
-            </div>
-        </div>
-        <div class="details col-md-3">
-            <div class="image-section d-flex flex-column justify-content-lg-center align-items-lg-center">
-                <img src="assets\images\sofa3.png" alt="chair image" class="image-ch">
-                <p>Luxe Motorised RRR Recliner Sofa</p>
-                    <p>$16,999</p>
-            </div>
-        </div>
-        <div class="details col-md-3">
-            <div class="image-section d-flex flex-column justify-content-lg-center align-items-lg-center">
-                <img src="assets\images\chair1.png" alt="chair image" class="image-ch">
-                    <p>White Single Sofa</p>
-                        <p>$10,999</p>
+        <div class="details col-md-3" *ngFor="let item of material.items">
+            <div class="image-section d-flex flex-column justify-content-lg-center align-items-lg-center justify-content-md-center align-content-md-center">
+                <img [src]="item.image" [alt]="item.alt" class="image-ch">
+                <p>{{ item.name }}</p>
+                <p>{{ item.price }}</p>
             </div>
         </div>
     </div>
