@@ -1,0 +1,48 @@
+.subscription {
+    gap: 2px;
+}
+
+.subscription p {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+}
+
+.fa-solid,
+.fa-square-envelope {
+    font-size: 30px;
+    color: var(--primary-color-1);
+}
+
+.input-field {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.send-icon {
+    background-color: var(--primary-color-1);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.send-icon:hover {
+    background-color: var(--primary-color-4);
+}
+
+.fa-paper-plane {
+    color: var(--secondary-color-11);
+    font-size: larger;
+}
+
+@media(max-width:767px) {
+    .input-field {
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+    }
+}

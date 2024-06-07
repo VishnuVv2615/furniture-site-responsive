@@ -1,0 +1,49 @@
+.logo,
+h2 {
+    font-size: xx-large;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-color-1);
+}
+
+.logo span {
+    color: var(--secondary-color-3);
+}
+
+.detail {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+li {
+    list-style-type: none;
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 75ms ease;
+}
+
+.icon-social {
+    background-color: var(--secondary-color-6);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color-1);
+    border-radius: 10px;
+}
+
+.icon-social:hover {
+    background-color: var(--secondary-color-4);
+    cursor: pointer;
+}
+
+.social-links {
+    justify-content: center;
+    align-items: center;
+}
