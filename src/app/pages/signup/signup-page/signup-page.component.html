@@ -1,0 +1,47 @@
+<div class="signup-page">
+    <div class="signUp">
+        <div class="signUp-header">
+            <h2>Signup</h2>
+            <button class="close-button" (click)="closeSignup()">&times;</button>
+        </div>
+        <div class="signUp-body">
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit($event)">
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username" formControlName="username" required>
+                <div *ngIf="signupForm.controls.username?.invalid && (signupForm.controls.username?.dirty || signupForm.controls.username?.touched)" class="text-danger">
+                    <span *ngIf="signupForm.controls.username?.errors?.['required']">Username is required</span>
+                    <span *ngIf="signupForm.controls.username?.errors?.['minlength']">Username must be at least 6 characters long</span>
+                  </div>
+                  <label for="email">Email</label>
+                <input id="email" type="text" name="email" formControlName="email" required>
+                <div *ngIf="signupForm.controls.email?.invalid && (signupForm.controls.email?.dirty || signupForm.controls.email?.touched)" class="text-danger">
+                    <span *ngIf="signupForm.controls.email?.errors?.['required']">email is required</span>
+                    <span *ngIf="signupForm.controls.email?.errors?.['minlength']">email must be at least 6 characters long</span>
+                  </div>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" formControlName="password" formControlName="password" required>
+                <div *ngIf="signupForm.controls.password?.invalid && (signupForm.controls.password?.dirty || signupForm.controls.password?.touched)" class="text-danger">
+                    <span *ngIf="signupForm.controls.password?.errors?.['required']">Password is required</span>
+                    <span *ngIf="signupForm.controls.password?.errors?.['minlength']">Password must be at least 6 characters long</span>
+                  </div>
+                  <label for="password">Confirm Password</label>
+                <input id="confirmPassword" type="password" name="confirmPassword" formControlName="confirmPassword" formControlName="confirmPassword" required>
+                <div *ngIf="signupForm.controls.confirmPassword?.invalid && (signupForm.controls.confirmPassword?.dirty || signupForm.controls.confirmPassword?.touched)" class="text-danger">
+                    <span *ngIf="signupForm.controls.confirmPassword?.errors?.['required']">Confirm Password is required</span>
+                    <span *ngIf="signupForm.controls.confirmPassword?.errors?.['minlength']">Confirm Password must be at least 6 characters long</span>
+                  </div>
+                  <div *ngIf="signupForm.errors?.['passwordMismatch'] && (signupForm.controls.password?.dirty || signupForm.controls.confirmPassword?.dirty)" class="text-danger">
+                    <span>Passwords do not match</span>
+                </div>
+                  <label for="mobile">Mobile</label>
+                <input id="mobile" type="text" name="mobile" formControlName="mobile" formControlName="mobile" required>
+                <div *ngIf="signupForm.controls.mobile?.invalid && (signupForm.controls.mobile?.dirty || signupForm.controls.mobile?.touched)" class="text-danger">
+                    <span *ngIf="signupForm.controls.mobile?.errors?.['required']">Confirm Password is required</span>
+                    <span *ngIf="signupForm.controls.mobile?.errors?.['minlength']">Confirm Password must be at least 6 characters long</span>
+                  </div>
+                <p class="text-dark">Already have an accound? <span class="login" (click)="openLoginPage()">Login</span></p>
+                <button type="submit" [disabled]="signupForm.invalid">Signup</button>
+            </form>
+        </div>
+    </div>
+</div>

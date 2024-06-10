@@ -9,7 +9,7 @@
         <a class="nav-link" [routerLink]="link.route" [class.active]="link.active" (click)="scrollToSection(link.route)" *ngFor="let link of navLinks">{{link.label}}</a>
         </div>
         <div class="login-cart d-flex gap-lg-3">
-            <div class="login">
+            <div class="login" (click)="openLogin()">
                 <i class="fa-solid fa-user-large"></i>
             </div>
             <div class="cart">
