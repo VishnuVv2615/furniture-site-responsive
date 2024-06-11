@@ -82,5 +82,53 @@
     .right-side {
         width: 300px;
     }
+    .detail {
+        font-size: 20px;
+        color: var(--primary-color-1);
+        /* z-index: 2; */
+    }
+    
+    
+}
+
+@media (max-width:460px) {
+    .abt-image {
+        width: 300px;
+    }
+
+    .left-side {
+        width: 300px;
+        text-align: left;
+    }
+
+    .container {
+        padding: 15px;
+    }
+    .right-side {
+        width: 300px;
+    }
+    .detail {
+        font-size: 10px;
+        color: var(--primary-color-1);
+        /* z-index: 2; */
+    }
+    .detail p{
+        font-size: 10px;
+    }
+    .left-side p{
+        font-size: 10px;
+        width: 250px;
+    }
+    
+.right-side {
+    width: 200px;
+}
+.container {
+    padding: 10px;
+    width: 300px;
+}
+.details{
+    width: 300px;
+}
     
 }
