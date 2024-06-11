@@ -1,10 +1,10 @@
 .footer-section {
     background-color: var(--secondary-color-11);
-    z-index: 2;
+    z-index: 2; 
 }
 
 .container {
-    padding: 10px;
+    padding: 50px;
     gap: 50px;
 }
 

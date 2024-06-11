@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="products row mb-5">
-                <div class="product col-6 col-md-3" *ngFor="let product of products">
+                <div class="product col-md-3" *ngFor="let product of products">
                     <div class="image-div d-flex flex-column justify-content-center align-items-center">
                         <img [src]="product.image" [alt]="product.name" class="image-ch">
                         <p>{{product.name}}</p>
@@ -11,16 +11,6 @@
                         <button class="atc-btn">Add to cart</button>
                     </div>
                 </div>
-                <div class="product col-6 col-md-3" *ngFor="let product of products">
-                    <div class="image-div d-flex flex-column justify-content-center align-items-center">
-                        <img [src]="product.image" [alt]="product.name" class="image-ch">
-                        <p>{{product.name}}</p>
-                        <p>${{product.price}}</p>
-                        <button class="atc-btn">Add to cart</button>
-                    </div>
-
-                </div>
-
             </div>
         </div>
     </div>

@@ -41,7 +41,7 @@
 
 @media(max-width:767px) {
     .input-field {
-        width: 150px;
+        width: 250px;
         height: 40px;
         border-radius: 10px;
     }
