@@ -79,4 +79,8 @@
     .container {
         padding: 15px;
     }
+    .right-side {
+        width: 300px;
+    }
+    
 }
