@@ -18,7 +18,6 @@ export class NavbarComponent implements OnInit {
     { label: 'Shop', active: false, route: '/shop', id: 'shop' },
     { label: 'About Us', active: false, route: '/about', id: 'about' },
     { label: 'Services', active: false, route: '/services', id: 'services' },
-    { label: 'Blog', active: false, route: '/blog', id: 'blog' },
     { label: 'Contact', active: false, route: '/contact', id: 'contact' },
   ]
 

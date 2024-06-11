@@ -4,7 +4,7 @@
         <p>Subscribe to Newsletter</p>
     </div>
     <form (submit)="subscribe($event)">
-        <div class="input-fields d-flex flex-column gap-3">
+        <div class="input-fields d-flex flex-column flex-md-row gap-3">
             <input type="text" placeholder="Enter Your Name" class="input-field p-1" [(ngModel)]="name" name="name" required>
             <input type="email" placeholder="Enter Your Email" class="input-field p-1" [(ngModel)]="email" name="email" required>
             <button type="submit" class="send-icon"><i class="fa-solid fa-paper-plane"></i></button>

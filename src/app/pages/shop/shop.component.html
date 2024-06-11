@@ -3,64 +3,24 @@
     <div class="container">
         <div class="row">
             <div class="products row mb-5">
-                <div class="product col-6 col-md-3">
+                <div class="product col-6 col-md-3" *ngFor="let product of products">
                     <div class="image-div d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets\images\chair2.png" alt="chair image" class="image-ch">
-                        <p>Magna Single Seater Recliner Sofa</p>
-                        <p>$19,999</p>
-                    </div>
-                    
-                </div>
-                <div class="product col-md-3">
-                    <div class="image-div d-flex flex-column justify-content-center align-items-center">
-                    <img src="assets\images\sofa3.png" alt="chair image" class="image-ch">
-                    <p>Luxe Motorised RRR Recliner Sofa</p>
-                        <p>$16,999</p>
+                        <img [src]="product.image" [alt]="product.name" class="image-ch">
+                        <p>{{product.name}}</p>
+                        <p>${{product.price}}</p>
+                        <button class="atc-btn">Add to cart</button>
                     </div>
                 </div>
-                <div class="product col-md-3">
+                <div class="product col-6 col-md-3" *ngFor="let product of products">
                     <div class="image-div d-flex flex-column justify-content-center align-items-center">
-                    <img src="assets\images\chair3.png" alt="chair image" class="image-ch">
-                    <p>Light Blue Velvet Cushion Seat</p>
-                        <p>$5,999</p>
+                        <img [src]="product.image" [alt]="product.name" class="image-ch">
+                        <p>{{product.name}}</p>
+                        <p>${{product.price}}</p>
+                        <button class="atc-btn">Add to cart</button>
                     </div>
+
                 </div>
-                <div class="product col-md-3" >
-                    <div class="image-div d-flex flex-column justify-content-center align-items-center">
-                    <img src="assets\images\chair1.png" alt="chair image" class="image-ch">
-                    <p>White Single Sofa</p>
-                        <p>$10,999</p>
-                    </div>
-                </div>
-                <div class="product col-6 col-md-3">
-                    <div class="image-div d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets\images\chair2.png" alt="chair image" class="image-ch">
-                        <p>Magna Single Seater Recliner Sofa</p>
-                        <p>$19,999</p>
-                    </div>
-                    
-                </div>
-                <div class="product col-md-3">
-                    <div class="image-div d-flex flex-column justify-content-center align-items-center">
-                    <img src="assets\images\sofa3.png" alt="chair image" class="image-ch">
-                    <p>Luxe Motorised RRR Recliner Sofa</p>
-                        <p>$16,999</p>
-                    </div>
-                </div>
-                <div class="product col-md-3">
-                    <div class="image-div d-flex flex-column justify-content-center align-items-center">
-                    <img src="assets\images\chair3.png" alt="chair image" class="image-ch">
-                    <p>Light Blue Velvet Cushion Seat</p>
-                        <p>$5,999</p>
-                    </div>
-                </div>
-                <div class="product col-md-3" >
-                    <div class="image-div d-flex flex-column justify-content-center align-items-center">
-                    <img src="assets\images\chair1.png" alt="chair image" class="image-ch">
-                    <p>White Single Sofa</p>
-                        <p>$10,999</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

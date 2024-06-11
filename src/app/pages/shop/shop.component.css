@@ -9,7 +9,7 @@
     color: var(--primary-color-1);
 }
 .product{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .image-ch{
     width: 250px;
@@ -28,6 +28,19 @@ font-weight: 500;
 .image-div:hover{
     background-color: var(--secondary-color-6);
     cursor: pointer;
+
+}
+.atc-btn{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(253, 253, 23);
+    border-radius: 10px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.atc-btn:hover{
+    cursor: pointer;
+    background-color: yellow;
     transform: scale(1.05);
     transition: all 75ms ease;
 }

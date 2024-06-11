@@ -5,7 +5,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SevicesComponent } from './pages/services/sevices.component';
-import { BlogComponent } from './pages/blog/blog.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './Footer/footer/footer.component';
 import { LoginPageComponent } from './pages/login/login-page/login-page.component';
@@ -22,7 +21,6 @@ import { SignupService } from './_services/signup.service';
     ShopComponent,
     AboutComponent,
     SevicesComponent,
-    BlogComponent,
     ContactComponent,
     FooterComponent,
     LoginPageComponent,
