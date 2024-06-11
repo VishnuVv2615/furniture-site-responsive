@@ -22,17 +22,33 @@
                 </div>
             </div>
             <div class="contact-form">
-                <form action="" class="d-flex flex-column gap-2">
+                <form [formGroup]="contactForm" action="" class="d-flex flex-column gap-2" (ngSubmit)="onSubmit()">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName">
+                    <input type="text" id="firstName" name="firstName" formControlName="firstName">
+                    <div class="text-danger" *ngIf="contactForm.controls.firstName?.invalid && (contactForm.controls.firstName?.dirty || contactForm.controls.firstName?.touched)">
+                        <span *ngIf="contactForm.controls.firstName?.errors?.['required']">Firstname is required.</span>
+                        <span *ngIf="contactForm.controls.firstName?.errors?.['minlength']">Firstname should be have 6 characters.</span>
+                    </div>
                     <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName">
+                    <input type="text" id="lastName" name="lastName" formControlName="lastName">
+                    <div class="text-danger" *ngIf="contactForm.controls.lastName?.invalid && (contactForm.controls.lastName?.dirty || contactForm.controls.lastName?.touched)">
+                        <span *ngIf="contactForm.controls.lastName?.errors?.['required']">Lastname is required.</span>
+                        <span *ngIf="contactForm.controls.lastName?.errors?.['minlength']">Lastname should be have 6 characters.</span>
+                    </div>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" formControlName="email">
+                    <div class="text-danger" *ngIf="contactForm.controls.email?.invalid && (contactForm.controls.email?.dirty || contactForm.controls.email?.touched)">
+                        <span *ngIf="contactForm.controls.email?.errors?.['required']">Email is required.</span>
+                        <span *ngIf="contactForm.controls.email?.errors?.['email']">Invalid email format</span>
+                    </div>
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="5" cols="30"></textarea>
+                    <textarea name="message" id="message" rows="5" cols="30" formControlName="message"></textarea>
+                    <div class="text-danger" *ngIf="contactForm.controls.message?.invalid && (contactForm.controls.message?.dirty || contactForm.controls.message?.touched)">
+                        <span *ngIf="contactForm.controls.message?.errors?.['required']">Message Field is required.</span>
+                        <span *ngIf="contactForm.controls.message?.errors?.['minlength']">Minimum need 100 characters.</span>
+                    </div>
            <div class="pt-5">
-            <button class="btn">Send Message</button>
+            <button class="btn" [disabled]="contactForm.invalid">Send Message</button>
            </div> 
                 </form>
             </div>

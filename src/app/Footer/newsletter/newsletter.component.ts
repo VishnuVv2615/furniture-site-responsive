@@ -18,11 +18,17 @@ event.preventDefault();
 if(this.name && this.email)
   {
     console.log(`Name:${this.name},Email:${this.email}`);
-    alert("Thank you for Subscribing")
+    alert(`Thank you ${this.name} for Subscribing.`);
+    this.clearFields();
   }
   else{
     alert("please enter both name and email")
   }
+  }
+
+  clearFields(){
+    this.name='';
+    this.email='';
   }
 
 }
