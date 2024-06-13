@@ -6,6 +6,8 @@ import { SevicesComponent } from './pages/services/sevices.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SignupPageComponent } from './pages/signup/signup-page/signup-page.component';
 import { LoginPageComponent } from './pages/login/login-page/login-page.component';
+import { CartLayoutComponent } from './pages/cart-layout/cart-layout.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 export const routes: Routes = [
     {
@@ -35,5 +37,11 @@ export const routes: Routes = [
     {
         path:"login",
         component:LoginPageComponent
+    },
+    {
+        path:'cart',component:CartLayoutComponent,
+        children:[
+            {path:'',component:CartComponent}
+        ]
     }
 ];

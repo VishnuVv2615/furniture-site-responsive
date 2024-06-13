@@ -36,7 +36,7 @@
     padding-right: 20px;
 }
 .login,.cart{
-    color: var(--secondary-color-3);
+    color: var(--secondary-color-10);
 }
 .login:hover, .cart:hover {
     color: var(--secondary-color-11);

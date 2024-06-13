@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './Header/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ShopComponent } from './pages/shop/shop.component';
@@ -8,7 +8,7 @@ import { SevicesComponent } from './pages/services/sevices.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './Footer/footer/footer.component';
 import { LoginPageComponent } from './pages/login/login-page/login-page.component';
-import { Observable } from 'rxjs';
+import { Observable, filter } from 'rxjs';
 import { LoginServiceService } from './_services/login-service.service';
 import { CommonModule } from '@angular/common';
 import { SignupPageComponent } from './pages/signup/signup-page/signup-page.component';
@@ -25,7 +25,7 @@ import { SignupService } from './_services/signup.service';
     FooterComponent,
     LoginPageComponent,
     CommonModule,
-    SignupPageComponent
+    SignupPageComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -36,8 +36,10 @@ export class AppComponent {
   isLoginOpen:Observable<boolean>;
   isSignupOpen:Observable<boolean>;
 
-  constructor(private loginServ:LoginServiceService,private SignSer:SignupService){
+  constructor(private loginServ:LoginServiceService,private SignSer:SignupService,private router:Router){
     this.isLoginOpen=this.loginServ.isLoginOpen$;
     this.isSignupOpen=this.SignSer.isSignupOpen$;
   }
+
+  
 }
